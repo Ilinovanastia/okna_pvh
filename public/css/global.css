@@ -1,0 +1,297 @@
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0;
+    }
+.base-component {
+        background-color: black;
+        border-radius: 12px;
+        margin: 2%;
+        width: 1400px;
+      }
+ @media (max-width: 768px) {
+      .base-component {
+        margin: 1%;
+        width: 100%;
+        margin-bottom: 3%;
+      }
+    
+      .component-content-info {
+        flex-direction: column; /* Размещаем блоки вертикально */
+        align-items: center;    /* Центрируем по горизонтали */
+      }
+    
+      .component-content-info-1,
+      .component-content-info-2,
+      .component-content-info-3 {
+        width: 70%;          /* Уменьшаем ширину блоков */
+        margin: 5% 0;        /* Убираем горизонтальные отступы и добавляем вертикальные */
+        text-align: center;   /* Центрируем текст */
+      }
+    
+      .mainsection {
+        height: 615px !important; /* Автоматическая высота */
+        padding: 20px;            /* Добавляем внутренний отступ */
+      }
+    
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .navbar .container {
+        align-items: flex-start;
+      }
+    
+      .logo {
+        margin-bottom: 10px;
+      }
+    
+      .burger-menu {
+        display: block;
+        margin-left: auto;
+      }
+    
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+      }
+    
+      .nav-links li {
+        margin: 10px 0;
+      }
+    
+      .nav-links.nav-active {
+        display: flex;
+      }
+    
+      .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+    
+      .button {
+        margin: 10px 0;
+        width: 100%;
+        padding: 10px 15px;
+      }
+      .service {
+        flex-direction: column; /* Карточки располагаются в столбик */
+      }
+    
+      .service-card {
+        width: 100%; /* Карточка занимает всю ширину экрана */
+        margin: 10px 0; /* Уменьшаем вертикальный отступ */
+        height: auto; /*  Автоматическая высота, чтобы контент помещался */
+        flex: 0 0 auto;  /* Убираем flex-basis */
+      }
+      .marquee-container {
+        font-size: 30px; /* Уменьшаем размер шрифта на мобильных */
+        margin-bottom: 10%; /* Увеличиваем отступ снизу на мобильных */
+      }
+    
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);  /*  Уменьшаем дистанцию прокрутки, чтобы быстрее закончилась  */
+        }
+      }
+      .marquee-content {
+        animation: marquee 15s linear infinite; /*Увеличиваем скорость анимации*/
+      }
+      .card-selector {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: auto; /* Автоматическая высота */
+        padding-bottom: 5%; /* Уменьшил отступ снизу */
+      }
+      .card-container {
+        flex-direction: column; /* Размещаем блоки вертикально */
+        align-items: center;    /* Центрируем по горизонтали */
+      }
+
+      .info-1, .info-2 {
+        width: 80%;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+      }
+      .object-info {
+        flex: 1;            /*  Занимают равное пространство по высоте  */
+        padding: 10px;
+        border: 1px solid #ccc;  /*  Для наглядности */
+        margin-bottom: 10px;
+      }
+      .card .object-info-1, .card .object-info-2 {
+        width: auto;
+        height: auto;
+      }
+    }
+    .head {
+        font-size: 1em;  /* Уменьшаем размер шрифта */
+        margin-bottom: 5%;
+      }
+    
+
+    /* Media Query для больших экранов (ширина экрана от 992px и больше) */
+    @media (max-width: 433px) {
+
+        .base-component {
+            margin: 1%; /* Небольшие внешние отступы со всех сторон */
+            width: 100%; /* Занимает всю доступную ширину */
+            margin-bottom: 3%; /* Отступ снизу для разделения компонентов */
+          }
+        
+          /* === Стили для информации внутри компонента === */
+          .component-content-info {
+            flex-direction: column; /* Вертикальное расположение элементов */
+            align-items: center; /* Центрирование по горизонтали */
+          }
+        
+          .component-content-info-1,
+          .component-content-info-2,
+          .component-content-info-3 {
+            width: 70%; /* Уменьшенная ширина для лучшего отображения на мобильных */
+            margin: 5% 0; /* Вертикальные отступы, убраны горизонтальные */
+            text-align: center; /* Центрирование текста внутри блоков */
+          }
+        
+          /* === Стили для главной секции === */
+          .mainsection {
+            height: 615px !important; /* Фиксированная высота (важно проверить, нужна ли она) */
+            padding: 20px; /* Отступы со всех сторон */
+          }
+        
+          /* === Стили для контейнера (общий) === */
+          .container {
+            flex-direction: column; /* Вертикальное расположение элементов */
+            align-items: flex-start; /* Выравнивание элементов по левому краю */
+          }
+        
+          /* === Стили для навигационной панели === */
+          .navbar .container {
+            align-items: flex-start; /* Выравнивание элементов по левому краю */
+          }
+        
+          .logo {
+            margin-bottom: 10px; /* Отступ снизу для логотипа */
+          }
+        
+          .burger-menu {
+            display: block; /* Отображение бургер-меню */
+            margin-left: auto; /* Прижимаем к правому краю */
+          }
+        
+          .nav-links {
+            display: none; /* Скрываем ссылки по умолчанию */
+            flex-direction: column; /* Вертикальное расположение */
+            width: 100%; /* Занимают всю ширину */
+            text-align: center; /* Центрирование текста */
+            margin-top: 10px; /* Отступ сверху */
+        
+          }
+        
+          .nav-links li {
+            margin: 10px 0; /* Вертикальные отступы для пунктов меню */
+          }
+        
+          .nav-links.nav-active {
+            display: flex; /* Показываем меню при добавлении класса .nav-active (JS) */
+          }
+        
+          /* === Стили для кнопок навигации === */
+          .nav-buttons {
+            flex-direction: column; /* Вертикальное расположение */
+            width: 100%; /* Занимают всю ширину */
+          }
+        
+          .button {
+            margin: 10px 0; /* Вертикальные отступы для кнопок */
+            width: 100%; /* Кнопки занимают всю ширину */
+            padding: 10px 15px; /* Внутренние отступы для кнопок */
+          }
+        
+          /* === Стили для секции сервисов === */
+          .service {
+            flex-direction: column; /* Вертикальное расположение карточек сервисов */
+          }
+        
+          .service-card {
+            width: 100%; /* Карточки занимают всю ширину */
+            margin: 10px 0; /* Вертикальные отступы */
+            height: auto; /* Автоматическая высота */
+            flex: 0 0 auto; /* Отключаем сжатие и растяжение */
+          }
+        
+          /* === Стили для бегущей строки (marquee) === */
+          .marquee-контейнер {
+            font-size: 30px; /* Размер шрифта */
+            margin-bottom: 10%; /* Отступ снизу */
+          }
+        
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+        
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        
+          .marquee-содержимое {
+            animation: marquee 15s linear infinite; /* Увеличиваем скорость анимации */
+          }
+        
+          /* === Стили для карточки выбора === */
+          .card-селектор {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height: auto;
+            padding-bottom: 5%;
+          }
+        
+          /* === Стили для контейнера карточек === */
+          .card-container {
+            flex-direction: column; /* Вертикальное расположение карточек */
+            align-items: center; /* Центрирование по горизонтали */
+          }
+        
+          /* === Стили для информации в карточках === */
+          .info-1,
+          .info-2 {
+            width: 80%; /* Уменьшенная ширина */
+            padding: 1%; /* Небольшие внутренние отступы */
+            display: flex;
+            flex-direction: column;
+          }
+        
+          .object-info {
+            flex: 1; /* Занимают равное пространство по высоте */
+            padding: 10px;
+            border: 1px solid #ccc; /* Для наглядности */
+            margin-bottom: 10px;
+          }
+        
+          /* === Стили для информации об объекте в карточке === */
+          .card .object-info-1,
+          .card .object-info-2 {
+            width: auto; /* Автоматическая ширина */
+            height: auto; /* Автоматическая высота */
+          }
+        
+        /* === Стили для заголовка === */
+        .head {
+          font-size: 1em; /* Размер шрифта */
+          margin-bottom: 5%; /* Отступ снизу */
+        }
+      /* Добавь здесь стили, специфичные для больших экранов */
+    }
