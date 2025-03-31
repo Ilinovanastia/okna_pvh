@@ -8,7 +8,7 @@ Okna PVH — это магазин, специализирующийся на п
 
 
 ```bash
-git clone https://github.com/username/okna_pvh.git
+git clone https://github.com/Ilinovanastia/okna_pvh.git
 
 cd okna_pvh
 
