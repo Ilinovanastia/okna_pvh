@@ -6,7 +6,7 @@ Okna PVH — это магазин, специализирующийся на п
 - Установленный [Node.js](https://nodejs.org/)
 - Установленный пакетный менеджер (npm или yarn)
 
-Сначала клонируйте репозиторий:
+
 ```bash
 git clone https://github.com/username/okna_pvh.git
 
